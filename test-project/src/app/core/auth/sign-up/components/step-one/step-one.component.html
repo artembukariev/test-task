@@ -1,0 +1,36 @@
+<div class="login-page_wrapper">
+  <div class="login-form">
+    <form class="login-fields" [formGroup]="form">
+
+      <div class="email-wrapper">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          class="password-control"
+          id="email"
+          formControlName="name"
+          required
+          placeholder="user@example.com"
+        />
+      </div>
+
+      <div class="password-wrapper">
+        <label for="password">Password</label>
+        <input
+          id="password"
+          formControlName="password"
+          required
+        />
+      </div>
+
+      <div class="password-wrapper">
+        <label for="verifyPassword">Verificate Password</label>
+        <input
+          id="verifyPassword"
+          formControlName="verifyPassword"
+          required
+        />
+      </div>
+    </form>
+  </div>
+</div>

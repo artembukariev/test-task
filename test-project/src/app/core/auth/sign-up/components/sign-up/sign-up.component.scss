@@ -1,0 +1,62 @@
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .button-wrapper {
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 16px;
+
+      button {
+        padding: 16px;
+        border-radius: 16px;
+        width: 120px;
+        color: #FFFFFF;
+        background-color: #3d00fd;
+        border: none;
+        cursor: pointer;
+      }
+  }
+}
+
+#msform {
+  margin-top: 30px;
+}
+
+#progressbar {
+  display: flex;
+  justify-content: space-around;
+}
+#progressbar li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#progressbar li:before {
+  content: counter(step);
+  width: 90px;
+  height: 35px;
+  line-height: 26px;
+  display: block;
+  font-size: 12px;
+  background-color: #008cf6;
+  margin: 0 auto 10px auto;
+}
+
+#progressbar li:after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  left: -50%;
+  top: 9px;
+  z-index: -1;
+}
+
+#progressbar li.inactive:before{
+  background: burlywood;
+  color: #000;
+}
+

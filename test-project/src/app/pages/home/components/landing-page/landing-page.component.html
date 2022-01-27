@@ -1,0 +1,24 @@
+<div class="landing-page_wrapper">
+  <div class="title">Website title</div>
+  <div class="user-greeting">Hello {{userName}}, Welcome back </div>
+<table>
+  <thead>
+  <tr>
+    <th>DATE</th>
+    <th>DAY</th>
+    <th>NIGHT</th>
+    <th>MIN</th>
+    <th>MAX</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let element of weatherInfo">
+    <td>{{element.dt * 1000 | date}}</td>
+    <td>{{element?.temp.day | number : '1.0-0'}}</td>
+    <td>{{element?.temp.night | number : '1.0-0'}}</td>
+    <td>{{element?.temp.min | number : '1.0-0'}}</td>
+    <td>{{element?.temp.max | number : '1.0-0'}}</td>
+  </tr>
+  </tbody>
+</table>
+</div>
