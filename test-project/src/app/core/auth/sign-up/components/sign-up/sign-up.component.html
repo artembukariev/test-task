@@ -1,1 +1,41 @@
-<p>sign-up works!</p>
+<div class="row">
+  <div>
+    <form [formGroup]="personalDetails" id="msform">
+      <ul id="progressbar">
+        <li [ngClass]="step>=1 ? 'active ' : 'inactive'">Step 1</li>
+        <li [ngClass]="step>=2 ? 'active' : 'inactive'">Step 2</li>
+        <li [ngClass]="step==3 ? 'active' : 'inactive'">Step 3</li>
+      </ul>
+
+      <div class="form-wrapper" *ngIf="step == 1">
+        <h2 class="fs-title">Step 1</h2>
+        <app-step-one [form]="personalDetails"></app-step-one>
+        <div class="button-wrapper">
+          <button (click)="next()"   class="next action-button" >Next</button>
+        </div>
+      </div>
+    </form>
+
+    <form  [formGroup]="userDetails" id="msSecondForm">
+      <div class="form-wrapper" *ngIf="step == 2">
+        <h2 class="fs-title">Step 2</h2>
+        <app-step-two [form]="userDetails"></app-step-two>
+        <div class="button-wrapper">
+          <button (click)="previous()" class="previous action-button-previous" >Previous</button>
+          <button (click)="next()" class="next action-button" >Next</button>
+        </div>
+      </div>
+    </form>
+
+    <form [formGroup]="additionDetails" id="msThirdForm">
+      <div class="form-wrapper" *ngIf="step == 3">
+        <h2 class="fs-title">Step 3</h2>
+        <app-step-three [form]="additionDetails"></app-step-three>
+        <div class="button-wrapper">
+          <button (click)="previous()" class="previous action-button-previous" >Previous</button>
+          <button (click)="submit()" type="submit"  class="submit action-button" >Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

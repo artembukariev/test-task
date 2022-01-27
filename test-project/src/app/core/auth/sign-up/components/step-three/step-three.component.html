@@ -1,1 +1,24 @@
-<p>step-three works!</p>
+<div class="step-page_wrapper">
+  <div class="step-form">
+    <form  class="step-fields"  [formGroup]="form">
+
+      <div class="textarea-wrapper">
+        <label for="about">How you heard about us?</label>
+        <textarea
+          id="about"
+          formControlName="aboutInfo"
+          required
+        ></textarea>
+      </div>
+
+      <div class="textarea-wrapper-wrapper">
+        <label for="add">Anything you would like to add</label>
+        <textarea
+          id="add"
+          formControlName="add"
+          required
+        ></textarea>
+      </div>
+    </form>
+  </div>
+</div>

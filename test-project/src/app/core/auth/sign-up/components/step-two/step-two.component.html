@@ -1,1 +1,39 @@
-<p>step-two works!</p>
+<div class="step-page_wrapper">
+  <div class="step-form">
+    <form  class="step-fields"  [formGroup]="form">
+
+      <div class="input-wrapper">
+        <label for="name">First Name</label>
+        <input
+          type="text"
+          class="password-control"
+          id="name"
+          formControlName="firstName"
+          required
+        />
+      </div>
+
+      <div class="input-wrapper">
+        <label for="lastName">Last Name</label>
+        <input
+          type="text"
+          class="password-control"
+          id="lastName"
+          formControlName="lastName"
+          required
+        />
+      </div>
+
+      <div class="email-wrapper">
+        <label for="dateOfBirth">Date Of Birth</label>
+        <input
+          type="date"
+          class="password-control"
+          id="dateOfBirth"
+          formControlName="dateOfBirth"
+          required
+        />
+      </div>
+    </form>
+  </div>
+</div>

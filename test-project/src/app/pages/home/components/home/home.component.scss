@@ -1,0 +1,28 @@
+.header {
+  padding: 0 32px;
+  height: 60px;
+  background-color: #008cf6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .header-title {
+    color: #FFFFFF;
+    font-weight: bold;
+  }
+
+  .buttons-wrapper {
+    width: 136px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header-button {
+    background-color: #3d00fd;
+    border: none;
+    border-radius: 25px;
+    color: #FFFFFF;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+}

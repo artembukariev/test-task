@@ -5,8 +5,10 @@ import { SignUpRoutingModule } from './sign-up-routing.module';
 import { StepOneComponent } from './components/step-one/step-one.component';
 import { StepTwoComponent } from './components/step-two/step-two.component';
 import { StepThreeComponent } from './components/step-three/step-three.component';
-import { LoginComponent } from './components/login/login.component';
+
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import {LoginComponent} from "../login/login.component";
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -19,7 +21,8 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
   ],
   imports: [
     CommonModule,
-    SignUpRoutingModule
+    SignUpRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class SignUpModule { }

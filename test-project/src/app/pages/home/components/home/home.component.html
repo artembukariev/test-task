@@ -1,1 +1,11 @@
-<p>home works!</p>
+<header class="header">
+  <div class="header-title">Website title</div>
+  <div class="buttons-wrapper" *ngIf="!loggedIn">
+    <button class="header-button" (click)="login()">Login</button>
+    <button class="header-button"  (click)="signUp()">Sign up</button>
+  </div>
+  <button class="header-button" (click)="logOut()"  *ngIf="loggedIn">Log Out</button>
+</header>
+
+<router-outlet></router-outlet>
+
